@@ -17,3 +17,8 @@ class articleSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = article
 		fields = '__all__'
+
+class artSerializer(serializers.ModelSerializer):
+	class Meta:
+		model = article
+		fields = ('pk', 'latitude', 'longitude')

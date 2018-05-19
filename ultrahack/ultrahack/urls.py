@@ -31,6 +31,7 @@ router = routers.DefaultRouter()
 router.register(r'authors', views.authorViewSet)
 router.register(r'users', views.UserViewSet)
 router.register(r'articles',views.articleViewSet)
+router.register(r'art',views.artViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
