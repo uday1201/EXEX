@@ -88,7 +88,7 @@ if DEBUG:
 	}
 else:
 	DATABASE: {
-		'default': dj_database_url.config(default=config('DATABASE_URL')),		
+			'default': dj_database_url.config('postgres://cwduarhqedkpmp:ec3315669df101800baf7a0ad2f32a4608c0c6248ecb03243480e07fec779925@ec2-23-23-247-222.compute-1.amazonaws.com:5432/d1qu4qu9hhr37j'),
 	}
 
 
