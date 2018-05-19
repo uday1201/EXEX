@@ -50,7 +50,10 @@
   "dependencies": {
     "cesium": "^1.30.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-grid-system": "^3.2.3",
+    "react-router-dom": "^4.2.2",
+    "react-sidebar": "^2.3.2"
   },
   "scripts": {
     "start": "node scripts/start.js",
