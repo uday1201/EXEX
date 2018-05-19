@@ -16,4 +16,4 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 class articleSerializer(serializers.ModelSerializer):
 	class Meta:
 		model = article
-		fields = ('title', 'date', 'subtitle', 'summary', 'latitude', 'longitude', 'place', 'author', 'content', 'price', 'article_image')
+		fields = '__all__'
