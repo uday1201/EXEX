@@ -25,8 +25,9 @@ from rest_framework import routers
 from exex import views
 
 router = routers.DefaultRouter()
+router.register(r'authors', views.authorViewSet)
 router.register(r'users', views.UserViewSet)
-router.register(r'groups', views.GroupViewSet)
+router.register(r'articles',views.articleViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.

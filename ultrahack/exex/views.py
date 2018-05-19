@@ -1,9 +1,16 @@
 from django.shortcuts import render
-
-from django.contrib.auth.models import User, Group
+from exex.models import author, article
+from django.contrib.auth.models import User
 from rest_framework import viewsets
-from exex.serializers import UserSerializer, GroupSerializer
+from exex.serializers import authorSerializer, UserSerializer, articleSerializer
 # Create your views here.
+
+class authorViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows authors to be viewed or edited.
+    """
+    queryset = author.objects.all().order_by('-created')
+    serializer_class = authorSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -12,10 +19,9 @@ class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
 
-
-class GroupViewSet(viewsets.ModelViewSet):
+class articleViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that allows groups to be viewed or edited.
+    API endpoint that allows articles to be viewed or edited.
     """
-    queryset = Group.objects.all()
-    serializer_class = GroupSerializer
+    queryset = article.objects.all().order_by('-date')
+    serializer_class = articleSerializer
