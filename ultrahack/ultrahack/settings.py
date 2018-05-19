@@ -87,7 +87,7 @@ if DEBUG:
 	    }
 	}
 else:
-	DATABASE: {
+	DATABASES: {
 		'default': dj_database_url.config(default = config('HEROKU_POSTGRESQL_IVORY_URL'))
 	}
 
